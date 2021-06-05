@@ -1,5 +1,5 @@
-*{
-	font-family: YouYuan,KaiTi,Yahei;
+* {
+	font-family: YouYuan, KaiTi, Yahei;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	font-family: Yahei mono, Verdana, fixedsys;
-	overflow-x: hidden;	
+	overflow-x: hidden;
 }
 
 td {
@@ -99,7 +99,7 @@ td.HandBookZombie {
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	bottom: auto;
 	margin: auto;
 }
 
@@ -212,9 +212,9 @@ td.HandBookZombie {
 
 #dFlagMeterContent {
 	position: absolute;
-	left: 444px;
+	left: 550px;
 	width: 157px;
-	height: 40px
+	height: 40px;
 }
 
 #dFlagMeterContent .flag {
@@ -675,7 +675,7 @@ td.HandBookZombie {
 }
 
 #dFog img {
-	opacity: .7;
+	opacity: 0.7;
 	filter: alpha(opacity=70)
 }
 
@@ -877,7 +877,7 @@ td.HandBookZombie {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	margin-left: 227px;
+	margin-left: 210px;
 	cursor: pointer;
 	width: 226px;
 	height: 41px;
@@ -1208,8 +1208,10 @@ td.HandBookZombie {
 	visibility: hidden;
 	position: absolute;
 	top: 0;
-	left: 50%;
-	margin-left: -450px;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	margin: auto;
 	width: 900px;
 	height: 600px;
 	background: url(images/interface/AwardScreen_Back.jpg) no-repeat
@@ -1293,9 +1295,11 @@ td.HandBookZombie {
 	background: #000;
 	color: #FFF;
 	position: absolute;
-	left: 50%;
-	margin-left: -442px;
-	top: 10px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	margin: auto;
 	width: 865px;
 	height: 550px;
 	visibility: hidden;
@@ -1723,7 +1727,7 @@ dd.yellow {
 	cursor: pointer;
 	color: #632F00;
 	text-decoration: none;
-	font-family: 华文行楷,楷体,隶书,Heiti;
+	font-family: 华文行楷, 楷体, 隶书, Heiti;
 	font-size: 25px
 }
 
@@ -1859,7 +1863,7 @@ dd.yellow {
 	width: 113px;
 	height: 41px;
 	border-left: 3px solid #85411C;
-	border-right: 3px solid #s4E250C;
+	border-right: 3px solid #4E250C;
 	border-top: 3px solid #85411C;
 	border-bottom: 3px solid #4E250C;
 	background-color: #8F431B;
@@ -2077,54 +2081,88 @@ dd.yellow {
 	cursor: pointer
 }
 
+#youxigonggao,
 #dSpeedContainer {
 	position: absolute;
-	left: 50%;
-	padding: 10px;
-	margin-left: -300px;
-	top: 87px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 	width: 600px;
 	font-size: 14px;
-	height: 430px;
-	border: 1px solid #000;
+	height: 460px;
 	background: #666;
 	color: #FFF;
 	text-align: center;
 	display: none;
-	z-index: 255
+	z-index: 255;
+	border-radius: 30px;
 }
 
+#youxigonggao {
+	border: 10px groove rgb(1, 204, 255);
+	box-shadow: 0px 0px 100px 10px rgb(1, 204, 255);
+}
+
+#dSpeedContainer {
+	border: 10px groove rgb(212, 0, 255);
+	box-shadow: 0px 0px 100px 10px rgb(212, 0, 255);
+}
+
+#youxigonggao .title,
 #dSpeedContainer .title {
-	position: relative;
+	margin: 25px auto;
 	height: 25px;
 	width: 538px;
 	line-height: 25px;
-	font-weight: bold;
-	color: #FF0
+	font-size: 25px;
+}
+
+#dSpeedContainer .title {
+	font-family: 华文行楷, 楷体, 隶书, Heiti;
+	color: rgb(9, 255, 0)
+}
+
+#youxigonggao .title {
+	font-family: YouYuan, 隶书, Heiti;
+	color: rgb(0, 247, 255)
 }
 
 #dSpeedContainer .nowspeed {
-	height: 50px;
-	line-height: 50px;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
 	font-weight: bold;
 	color: #FF0
 }
 
+#youxigonggao .content,
 #dSpeedContainer .content {
+	margin: 10px 25px;
 	text-align: left;
 	line-height: 30px
 }
 
+#youxigonggao .content span,
 #dSpeedContainer .content span {
 	font-weight: 700;
 	color: #FF0
 }
 
-.dSpeed {
-	position: relative;
-	margin-top: 20px;
+#youxigonggao .buttons,
+#dSpeedContainer .buttons {
+	margin: 10px auto;
+	width: 500px;
 	height: 50px;
-	width: 100%
+	line-height: 50px;
+}
+
+.dSpeed {
+	margin: 10px auto;
+	height: 50px;
+	width: 500px;
+	text-align: center;
 }
 
 .dSpeed div {
@@ -2141,6 +2179,53 @@ dd.yellow {
 .dSpeed .dS2 div {
 	float: left
 }
+
+/* #youxigonggao {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 600px;
+	font-size: 14px;
+	height: 460px;
+	background: #666;
+	color: #FFF;
+	text-align: center;
+	display: none;
+	z-index: 255;
+	border-radius: 30px;
+} */
+
+/* #youxigonggao .title {
+	margin: 25px auto;
+	height: 25px;
+	width: 538px;
+	line-height: 25px;
+	font-family: 华文行楷, 楷体, 隶书, Heiti;
+	font-size: 25px;
+	color: rgb(9, 255, 0)
+} */
+
+/* #youxigonggao .content {
+	margin: 10px 25px;
+	text-align: left;
+	line-height: 30px
+} */
+
+/* #youxigonggao .content span {
+	font-weight: 700;
+	color: #FF0
+}
+
+#youxigonggao .buttons {
+	margin: 10px auto;
+	width: 500px;
+	height: 50px;
+	line-height: 50px;
+} */
+
 
 button.jhp {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#f1f1f1));

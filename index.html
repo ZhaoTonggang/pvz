@@ -40,7 +40,7 @@
 								k: 'ShowOptions()'
 							}, {
 								c: '718,512,790,558',
-								k: 'ShowHelp()'
+								k: 'GongGao()'
 							}, {
 								c: '800,495,879,548',
 								k: 'SetNone($(\'dSurface\'));PlayAudio(\'tap\')'
@@ -52,9 +52,9 @@
 
 				</script>
 			</map>
-			<img src="./images/interface/Surface.jpg" usemap="#FPMap0" border="0">
+			<img src="./images/interface/Surface.jpg" usemap="#FPMap0">
 			<div
-				style="position:absolute;width:350px;height:150px;left:468px;top:82px;background:url(images/interface/SelectorScreen_Shadow_Adventure.png)">
+				style="position:absolute;width:350px;height:150px;left:468px;top:82px;background:url('images/interface/SelectorScreen_Shadow_Adventure.png')">
 			</div>
 			<div class="adventure0" id="dAdventure" onmouseover="this.style.backgroundPosition='bottom';"
 				onmouseout="this.style.backgroundPosition='top'" onclick="StartAdventure()"></div>
@@ -87,10 +87,10 @@
 			</div>
 		</div>
 		<div id="dPause">
-			<table border="0" width="434" cellspacing="0" cellpadding="0" height="484">
+			<table width="434" cellspacing="0" cellpadding="0" height="484">
 				<tr>
 					<td width="107" height="142" valign="bottom">
-						<img border="0" src="images/interface/dia_topleft.png" width="423" height="401">
+						<img src="images/interface/dia_topleft.png" width="423" height="401">
 					</td>
 				</tr>
 			</table>
@@ -118,7 +118,7 @@
 					<div class="BigLevel button" onclick="ViewHandBook()">&nbsp;查看图鉴</div>
 					<div class="BigLevel button" onclick="SelectModal(oS.Lvl)">&nbsp;重新开始</div>
 					<div class="BigLevel button"
-						onclick="SelectModal(0);SetBlock($('dSurface'),$('iSurfaceBackground'));">&nbsp;返回菜单</div>
+						onclick="SelectModal(0);SetBlock($('dSurface'));">&nbsp;返回菜单</div>
 					<div class="OptionsMenuButton" style="margin-top:20px"
 						onmousedown="OptionsMenuDown(this,$('sOptionsMenu'))"
 						onmouseup="OptionsMenuUP(this,$('sOptionsMenu'));HiddenOptions();CheckAutoSun($('cAutoSun'));CheckSilence($('cSilence'))">
@@ -138,7 +138,6 @@
 						9: '九',
 						10: '十'
 					};
-
 					var ArLvls = {
 						1: 'Unity',
 						2: 'The 7 Seas',
@@ -181,17 +180,16 @@
 
 				</script>
 			</div>
-
 			<div id="dAdvSmallContainer" class="TitleSmallContainer Challenge_Background">
 				<div id="dAdvSmallTitle">冒险模式</div>
 				<div style="width:800px;height:475px; overflow-y:scroll; border:0px solid;">
 					<div class="list">
 						<div class="title">白天草地</div>
 						<div class="icon">
-							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" border="0"
+							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px"
 								src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -203,10 +201,10 @@
 					<div class="list">
 						<div class="title">夜晚草地</div>
 						<div class="icon">
-							<img class="img1" style="clip:rect(0,183px,auto,122px);left:-106px" border="0"
+							<img class="img1" style="clip:rect(0,183px,auto,122px);left:-106px"
 								src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -218,10 +216,10 @@
 					<div class="list">
 						<div class="title">白天泳池</div>
 						<div class="icon">
-							<img class="img1" style="clip:rect(0,305px,auto,244px);left:-228px" border="0"
+							<img class="img1" style="clip:rect(0,305px,auto,244px);left:-228px"
 								src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -230,14 +228,13 @@
 							</script>
 						</div>
 					</div>
-
 					<div class="list">
 						<div class="title">东海龙宫</div>
 						<div class="icon">
-							<img class="img1" style="clip:rect(0,244px,auto,183px);left:-167px" border="0"
+							<img class="img1" style="clip:rect(0,244px,auto,183px);left:-167px"
 								src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -249,10 +246,10 @@
 					<div class="list">
 						<div class="title">水乡嘉兴</div>
 						<div class="icon">
-							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" border="0"
+							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px"
 								src="images/interface/jiaxing.png" width="366" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -265,9 +262,9 @@
 						<div class="title">熔岩洞穴</div>
 						<div class="icon">
 							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" width="61" height="61"
-								border="0" src="images/interface/lavass.png" width="366" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+								src="images/interface/lavass.png" width="366" height="61"></td>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -279,10 +276,10 @@
 					<div class="list">
 						<div class="title">魔音之旅</div>
 						<div class="icon">
-							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" border="0"
-								src="images/interface/rrff.png" width="61" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" src="images/interface/rrff.png"
+								width="61" height="61"></td>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -294,10 +291,10 @@
 					<div class="list">
 						<div class="title">远古教堂</div>
 						<div class="icon">
-							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" border="0"
-								src="images/interface/dd.png" width="61" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" src="images/interface/dd.png"
+								width="61" height="61"></td>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -309,10 +306,10 @@
 					<div class="list">
 						<div class="title">电音时代</div>
 						<div class="icon">
-							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" border="0"
-								src="images/interface/d.png" width="61" height="61"></td>
-							<img class="img2" border="0" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-								height="76"></p>
+							<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" src="images/interface/d.png"
+								width="61" height="61"></td>
+							<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76" height="76">
+							</p>
 						</div>
 						<div class="lvl2">
 							<script>
@@ -346,7 +343,6 @@
 										'112', '决战秦皇', 'wang1.png',
 										'FB', '副本-关口恶战', 'FB.png',
 										'WJY', '副本-江轶同学会晤', 'WJY.png',
-
 									],
 									v, i = 0,
 									n, l = ar.length,
@@ -404,7 +400,6 @@
 									'psdh', '排山倒海', 'pai.png',
 									'150', '常青之塔', 'mota.png'
 								],
-
 								v, i = 0,
 								n, l = ar.length,
 								s = '';
@@ -420,9 +415,6 @@
 								//alert(ar[n]);
 							}
 
-
-
-
 							function getlevel(levelname, imgname, inmininame) {
 								i % 5 == 0 && (s += '<tr>');
 								s += '<td height="139" valign="top" onclick="SelectModal(\'' + levelname +
@@ -435,39 +427,32 @@
 							}
 							if (month >= 10 || month <= 11) {
 								if (date >= 30 || date <= 5) {
-
-
-
 									getlevel("Helloween", "fmdzz.png", "万圣节");
 								}
 							}
 							var date1 = parseInt(date);
 							var month1 = parseInt(month);
 							var sa = 177 + month1 + date1 + 1;
-
 							getlevel(sa, "pai.png", "每日挑战");
-
-
 							document.write(s);
-
-
 							if (i != 0) {
 								while (--i) s += '<td>　</td>';
 								s += '</tr>';
 							}
-
 						})()
 
 					</script>
 				</table>
 				<div class="button" onmouseover="this.style.backgroundPosition='bottom'"
-					onmouseout="this.style.backgroundPosition='top'" onclick="HiddenMiniGame()">关闭</div>
+					onmouseout="this.style.backgroundPosition='top'" onclick="HiddenMiniGame()">关闭
+				</div>
 			</div>
 
 			<!--单机界面已作废，无特殊请勿乱动-->
 			<div id="dRiddle0">
 				<div class="button" onmouseover="this.style.backgroundPosition='bottom'"
-					onmouseout="this.style.backgroundPosition='top'" onclick="ReturnRiddleInx()">益智模式索引</div>
+					onmouseout="this.style.backgroundPosition='top'" onclick="ReturnRiddleInx()">益智模式索引
+				</div>
 			</div>
 			<!--对战界面已作废，无特殊请勿乱动-->
 			<div id="dRiddle1">
@@ -487,28 +472,31 @@
 						onclick="window.frames['fRiddleAlreadyCreateGame'].SearchLvl(5,$('tRiddleTitle').value)">标题查询</button>
 					<div style="border:1px solid #000;height:440px;width:100%;background:#fafafa">
 						<iframe name="fRiddleAlreadyCreateGame" id="fRiddleAlreadyCreateGame" marginwidth="1"
-							marginheight="1" height="100%" width="100%" scrolling="no" border="0"
-							frameborder="0"></iframe>
+							marginheight="1" height="100%" width="100%" scrolling="no" frameborder="0">
+						</iframe>
 					</div>
 				</div>
 				<div class="button" onmouseover="this.style.backgroundPosition='bottom'"
-					onmouseout="this.style.backgroundPosition='top'" onclick="ReturnRiddleInx()">叛逆模式索引</div>
+					onmouseout="this.style.backgroundPosition='top'" onclick="ReturnRiddleInx()">叛逆模式索引
+				</div>
 				<div class="button" style="left:220px" onmouseover="this.style.backgroundPosition='bottom'"
 					onmouseout="this.style.backgroundPosition='top'"
 					onclick="if($User.Visitor.UserName!='游客'||confirm('游客只能体验创建功能无法存档\n请使用注册用户以保存你的创意！'))SelectModal('ImZombieCreateGame')">
-					创建新的关卡</div>
+					创建新的关卡
+				</div>
 			</div>
 			<div id="dRiddleClose" onmouseover="this.style.backgroundPosition='bottom'"
-				onmouseout="this.style.backgroundPosition='top'" onclick="HiddenRiddleGame()">关 闭&nbsp;</div>
+				onmouseout="this.style.backgroundPosition='top'" onclick="HiddenRiddleGame()">关 闭&nbsp;
+			</div>
 		</div>
-	</div>
 	</div>
 	<div class="WindowFrame" id="dAll">
 		<div id="tGround"></div>
 		<div id="dCardList"></div>
 		<div id="dZombie"></div>
 		<div id="bShowHandBook" onmouseover="this.style.backgroundPosition='bottom'"
-			onmouseout="this.style.backgroundPosition='top'" onclick="ViewHandBook()">图 鉴&nbsp;</div>
+			onmouseout="this.style.backgroundPosition='top'" onclick="ViewHandBook()">图 鉴&nbsp;
+		</div>
 		<div id="dSelectCard">
 			<div class="title"></div>
 			<div id="dPCard"></div>
@@ -537,18 +525,19 @@
 		<div class="title">图鉴——索引</div>
 		<div class="content">
 			<div>
-				<img border="0" src="images/Plants/SunFlower/0.gif" width="73" height="74"><br>
+				<img src="images/Plants/SunFlower/0.gif" width="73" height="74"><br>
 				<input class="button" type="button" value="查看植物" name="btnViewPlant" id="btnViewPlant"
 					onclick="InitHandBookPCard()">
 			</div>
 			<div style="left:50%;padding-top:95px">
-				<img border="0" src="images/Zombies/Zombie/0.gif" width="149" height="130"><br>
+				<img src="images/Zombies/Zombie/0.gif" width="149" height="130"><br>
 				<input class="button" type="button" value="查看僵尸" name="btnViewZombie" id="btnViewZombie"
 					onclick="InitHandBookZCard()">
 			</div>
 		</div>
 		<div class="close" onmouseover="this.style.backgroundPosition='bottom'"
-			onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;</div>
+			onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;
+		</div>
 	</div>
 	<div id="dHandBookPZ" class="WindowFrame Almanac_PlantBack">
 		<div id="dHandBookP">
@@ -577,15 +566,17 @@
 		</div>
 		<div class="dButton">
 			<div class="button1" onmouseover="this.style.backgroundPosition='bottom'"
-				onmouseout="this.style.backgroundPosition='top'" onclick="ReturnHandBookInx()">图鉴索引</div>
+				onmouseout="this.style.backgroundPosition='top'" onclick="ReturnHandBookInx()">图鉴索引
+			</div>
 			<div class="button2" onmouseover="this.style.backgroundPosition='bottom'"
-				onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;</div>
+				onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;
+			</div>
 		</div>
 	</div>
 	<div id="dNewPlant">
 		<div id="dNewPlantTitle">你获得了一棵新的植物！</div>
 		<div class="card">
-			<img id="iNewPlantCard" border="0">
+			<img id="iNewPlantCard">
 		</div>
 		<br>
 		<div id="dNewPlantName"></div>
@@ -604,7 +595,7 @@
 		</script>
 	</div>
 	<div id="dSpeedContainer">
-		<div class="title">应玩家要求，特推出游戏调速功能</div>
+		<div class="title">调速功能使用说明：</div>
 		<div class="dSpeed" title="点击一个速度选择软加速">
 			<div class="dS1">在相应的速度上点击</div>
 			<div class="dS2">
@@ -616,14 +607,34 @@
 			</div>
 		</div>
 		<div class="nowspeed">当前的游戏速度:<span id="dDisplaySpeed">1</span> 倍速</div>
-		<div class="content"><span>&nbsp;&nbsp;&nbsp; 调速说明</span>：理想状态下，游戏提供的速度调节是<font color="#FFFF00">
-				1/2倍速-10倍速</font>。但是调速效果跟你的浏览器以及电脑有关，比如IE6浏览器在再好的电脑上也别指望能上10倍速。<br>&nbsp;&nbsp;&nbsp;
+		<div class="content"><span>&nbsp;&nbsp;&nbsp; 调速说明</span>：理想状态下，游戏提供的速度调节是<strong style="color: #FFFF00;">
+				1/2倍速-10倍速</strong>。但是调速效果跟你的浏览器以及电脑有关，比如IE6浏览器在再好的电脑上也别指望能上10倍速。<br>&nbsp;&nbsp;&nbsp;
 			调速后可能画面视觉会出现偶尔有点一顿一顿的感觉，并且在比较高的速度时某些浏览器可能无法实现加速效果或者只能短时间加速然后速度便慢下来。<br>&nbsp;&nbsp;&nbsp; <span
 				style="color:#FF0"><b>最后强烈推荐使用IE9,Chrome,FireFox,Opera浏览器，能让你用豌豆射手体验到机关枪的感觉！<br>&nbsp;&nbsp;&nbsp;
-					声明：受浏览器和电脑限制，该调速不保证一定能达到选择速度的效果！</b></span></div>
-		<br>
-		<div><input type=button value="返回游戏" onclick="HiddenSpeed()">&nbsp;&nbsp; <input type=button value="恢复原速"
-				onclick="CSpeed(1,10,1)"></div>
+					声明：受浏览器和电脑限制，该调速不保证一定能达到选择速度的效果！</b></span>
+		</div>
+		<div class="buttons">
+			<input type=button value="返回游戏" onclick="HiddenSpeed()">&nbsp;&nbsp;
+			<input type=button value="恢复原速" onclick="CSpeed(1,10,1)">
+		</div>
+	</div>
+	<div id="youxigonggao">
+		<div class="title">游 &nbsp; 戏 &nbsp; 公 &nbsp; 告</div>
+		<div class="nowspeed"><hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;"></div>
+		<div class="nowspeed"><em style="color: #FF0;text-align: center;">2021年06月06日</em></div>	
+		<div class="content"><span>1.修复了元素定位错误。</span><br><span>2.优化了源码结构。</span></div>
+		<div class="nowspeed"><hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;"></div>
+		<div class="nowspeed"><em style="color: #FF0;text-align: center;">2021年06月05日</em></div>	
+		<div class="content"><span> 新域名“https://pvz.heheda.cn/”启用。</span></div>
+		<div class="nowspeed"><hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;"></div>
+		<div class="nowspeed"><em style="color: #FF0;text-align: center;">2021年06月04日</em></div>	
+		<div class="content"><span> 重写了UI界面。</span></div>
+		<div class="nowspeed"><hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;"></div>
+		<div class="nowspeed"><em style="color: #FF0;text-align: center;">2021年06月02日</em></div>	
+		<div class="content"><span> 第一个版本上线运营。</span></div>
+		<div class="buttons">
+			<input type=button value="朕已阅" onclick="GongGaoOff()">
+		</div>
 	</div>
 	<script>
 		$User.Client.PC && $User.HTTP ? (

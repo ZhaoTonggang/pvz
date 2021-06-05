@@ -2215,7 +2215,7 @@ var $User = function () {
 		document.cookie = a + "=0;"
 	},
 	WordUTF8 =
-		'<div id="dLogo" style="position:absolute;width:900px;height:600px;z-index:1"><div id="LogoWord" style="position:absolute;color:#FF0;top:300px;width:100%;height:100px;"><span style="position:absolute;width:100%;height:400px;top:-200px;cursor:pointer" onclick="PlayAudio(\'gravebutton\');SetBlock($(\'dSurface\'),$(\'iSurfaceBackground\'));ShowNameDiv()"></span><div style="position:absolute;font-size:14px;left:660px;text-align:center;width:140px;top:185px;line-height:1.5;font-weight:bold"><span style="cursor:pointer"><span id="" style=""></span></span></div></div><div style="position:absolute;width:74px;height:41px;left:807px;top:502px;cursor:pointer;z-index:300" onclick="SetVisible($(\'dProcess\'))"></div><img src="" style="position:absolute;left:550px;top:-40px"></div>',
+		'<div id="dLogo" onclick="GongGao()" style="position:absolute;width:900px;height:600px;z-index:1"><div id="LogoWord" style="position:absolute;color:#FF0;top:300px;width:100%;height:100px;"><span style="position:absolute;width:100%;height:400px;top:-200px;cursor:pointer" onclick="PlayAudio(\'gravebutton\');SetBlock($(\'dSurface\'),$(\'iSurfaceBackground\'));ShowNameDiv()"></span><div style="position:absolute;font-size:14px;left:660px;text-align:center;width:140px;top:185px;line-height:1.5;font-weight:bold"><span style="cursor:pointer"><span id="" style=""></span></span></div></div><div style="position:absolute;width:74px;height:41px;left:807px;top:502px;cursor:pointer;z-index:300" onclick="SetVisible($(\'dProcess\'))"></div><img src="" style="position:absolute;left:550px;top:-40px"></div>',
 	ShowNameDiv = function () {
 		oSym.Start();
 		(function (c) {
@@ -2408,6 +2408,18 @@ var $User = function () {
 		PlayAudio("gravebutton");
 		SetNone($("dOptionsMenuback"), $("dOptionsMenu"));
 		SetBlock($("dSpeedContainer"))
+	},
+	GongGao = function () {
+		// var b = oSym;
+		// b.Stop();
+		PlayAudio("gravebutton");
+		// SetNone($("dOptionsMenuback"), $("dOptionsMenu"));
+		SetBlock($("youxigonggao"))
+	},
+	GongGaoOff = function () {
+		PlayAudio("tap");
+		SetNone($("youxigonggao"));
+		// oS.Lvl && (SetNone($("dSurface"))
 	},
 	HiddenSpeed = function () {
 		PlayAudio("tap");
