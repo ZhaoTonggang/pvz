@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="./UI.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<!--PWA配置-->
+	<link rel='manifest' href='./manifest.json' />
 </head>
 
 <body id="dBody" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -648,6 +650,11 @@
 	</script>
 	<script src="./js/CPlants.js"></script>
 	<script src="./js/CZombie.js"></script>
+	<script async="async" type="module">
+		import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+		const el = document.createElement('pwa-update');
+		document.body.appendChild(el);
+	</script>
 </body>
 
 </html>
