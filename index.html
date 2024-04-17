@@ -1,13 +1,24 @@
-<html lang="zh">
+﻿<html lang="zh-CN" onselectstart="return false" oncontextmenu=self.event.returnValue=false>
 	<head>
-		<title>植物大战僵尸</title>
-		<link rel="stylesheet" href="./UI.css">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title>植物大战僵尸 - 精品页游•匠心巨作</title>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=1">
+		<meta name="description" content="在线免费畅玩植物大战僵尸，匠心巨作，高品质还原，体验原汁原味的快乐！">
+		<meta name="keywords" content="植物大战僵尸,植物大战僵尸中文版,在线植物大战僵尸,植物大战僵尸页游,植物大战僵尸H5,网页游戏,在线游戏">
+		<meta name="author" content="赵彤刚">
+		<meta name="theme-color" content="#4caf50">
+		<!--网站图标配置-->
+		<link rel="apple-touch-icon" sizes="192x192" href="./icons/192.png">
+		<link rel="icon" type="image/png" sizes="128x128" href="./icons/128.png">
+		<link rel="icon" type="image/png" sizes="144x144" href="./icons/144.png">
+		<link rel="icon" type="image/png" sizes="384x384" href="./icons/384.png">
+		<link rel="icon" type="image/png" sizes="512x512" href="./icons/512.png">
+		<link rel="stylesheet" href="./css/index.css">
 		<!--PWA配置-->
 		<link rel='manifest' href='./manifest.json' />
 	</head>
-	<body id="dBody" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+	<body id="dBody">
 		<div id="preloader">
 			<div id="status" class="WindowFrame"></div>
 		</div>
@@ -19,76 +30,58 @@
 				<div id="sFlagMeterTitleF"></div>
 			</div>
 			<div id="dFlagMeterContent">
-				<img id="imgFlagMeterEmpty" src="./images/interface/FlagMeterEmpty.png">
-				<img id="imgFlagMeterFull" src="./images/interface/FlagMeterFull.png">
-				<img class="flag" id="imgFlag1" src="./images/interface/FlagMeterParts2.png">
-				<img class="flag" id="imgFlag2" src="./images/interface/FlagMeterParts2.png">
-				<img class="flag" id="imgFlag3" src="./images/interface/FlagMeterParts2.png">
-				<img class="flag" id="imgFlag4" src="./images/interface/FlagMeterParts2.png">
-				<img id="imgGQJC" src="./images/interface/FlagMeterLevelProgress.png">
-				<img id="imgFlagHead" src="./images/interface/FlagMeterParts1.png">
+				<img id="imgFlagMeterEmpty" src="./images/interface/FlagMeterEmpty.png" />
+				<img id="imgFlagMeterFull" src="./images/interface/FlagMeterFull.png" />
+				<img class="flag" id="imgFlag1" src="./images/interface/FlagMeterParts2.png" />
+				<img class="flag" id="imgFlag2" src="./images/interface/FlagMeterParts2.png" />
+				<img class="flag" id="imgFlag3" src="./images/interface/FlagMeterParts2.png" />
+				<img class="flag" id="imgFlag4" src="./images/interface/FlagMeterParts2.png" />
+				<img id="imgGQJC" src="./images/interface/FlagMeterLevelProgress.png" />
+				<img id="imgFlagHead" src="./images/interface/FlagMeterParts1.png" />
 			</div>
 		</div>
 		<div id="dSurface" class="WindowFrame">
 			<div id="iSurfaceBackground">
 				<map name="FPMap0">
-					<script>
-						(function() {
-							var s = "",
-								ar = [{
-									c: '641,466,724,527',
-									k: 'ShowOptions()'
-								}, {
-									c: '718,512,790,558',
-									k: 'GongGao()'
-								}, {
-									c: '800,495,879,548',
-									k: 'SetNone($(\'dSurface\'));PlayAudio(\'tap\')'
-								}];
-							for (var i = 0; i <= 2; i++) s += '<area href="javascript:;" shape="rect" coords="' + ar[i].c +
-								'" onclick="' + ar[i].k + '">';
-							document.write(s);
-						})()
-					</script>
+					<area href="javascript:void(0)" shape="rect" coords="641,466,724,527" onclick="ShowOptions()" />
+					<area href="javascript:void(0)" shape="rect" coords="718,512,790,558" onclick="GongGao()" />
+					<area href="javascript:void(0)" shape="rect" coords="800,495,879,548"
+						onclick="SetNone($('dSurface'));PlayAudio('tap')" />
 				</map>
-				<img src="./images/interface/Surface.jpg" usemap="#FPMap0">
+				<img src="./images/interface/Surface.png" usemap="#FPMap0" />
 				<div
-					style="position:absolute;width:350px;height:150px;left:468px;top:82px;background:url('images/interface/SelectorScreen_Shadow_Adventure.png')">
+					style="position:absolute;width:350px;height:150px;left:468px;top:82px;background:url(./images/interface/SelectorScreen_Shadow_Adventure.png)">
 				</div>
 				<div class="adventure0" id="dAdventure" onmouseover="this.style.backgroundPosition='bottom';"
 					onmouseout="this.style.backgroundPosition='top'" onclick="StartAdventure()"></div>
 				<div
-					style="position:absolute;width:318px;height:136px;left:476px;top:208px;background:url(images/interface/SelectorScreen_Shadow_Survival.png)">
+					style="position:absolute;width:318px;height:136px;left:476px;top:208px;background:url(./images/interface/SelectorScreen_Shadow_Survival.png)">
 				</div>
 				<div class="mini" onmouseover="this.style.backgroundPosition='bottom';"
 					onmouseout="this.style.backgroundPosition='top'" onclick="ShowMiniGame()"></div>
 				<div
-					style="position:absolute;width:289px;height:127px;left:480px;top:307px;background:url(images/interface/SelectorScreen_Shadow_Challenge.png)">
+					style="position:absolute;width:289px;height:127px;left:480px;top:307px;background:url(./images/interface/SelectorScreen_Shadow_Challenge.png)">
 				</div>
 				<div class="riddle" onmouseover="this.style.backgroundPosition='bottom';"
 					onmouseout="this.style.backgroundPosition='top'" onclick="ShowRiddleGame()"></div>
 				<div class="Sunflower_trophy">
-					<script>
-						document.write(
-							'<img onclick="PlayAudio(\'buttonclick\');alert(\'新植物大战僵尸js\\n原作：lonelystar\\n制作单位：江南游戏开发社\\n开发人员：PAK向日葵（程序关卡设计）疯狂阳光Bean（美术指导、设计）\\n技术帮扶：Mr_KhrisTele\\n图片、音乐版权：popcap、部分来自网络搜集\\n鸣谢&感谢：彩色奢望、15574587513sh、陈思行大王、筱岚君、56743x、徐昊、四二fourtwo以及全体在游戏开发社参加内部测试的人员\\n感谢组织：pvz2js、pvz2pak、pvz2素材吧、pvz2科研部门\\n现开发人员+：Enderexplain\')" title="制作人" alt="3" src="images/interface/Sunflower_trophy32.png">'
-						)
-					</script>
+					<img onclick="PlayAudio('buttonclick');alert('新植物大战僵尸\n原作：lonelystar\n制作单位：江南游戏开发社\n开发人员：PAK向日葵（程序关卡设计）疯狂阳光Bean（美术指导、设计）\n技术帮扶：Mr_KhrisTele\n图片、音乐版权：popcap、部分来自网络搜集\n鸣谢&感谢：彩色奢望、15574587513sh、陈思行大王、筱岚君、56743x、徐昊、四二fourtwo以及全体在游戏开发社参加内部测试的人员\n感谢组织：pvz2js、pvz2pak、pvz2素材吧、pvz2科研部门\n现开发人员+：Enderexplain')"
+						title="制作人" alt="3" src="./images/interface/Sunflower_trophy32.png" />
 				</div>
 				<div class="handbook" onmouseover="this.style.backgroundPosition='bottom'"
 					onmouseout="this.style.backgroundPosition='top'" onclick="ViewHandBook()"></div>
 				<div id="ZombieHand"></div>
-				<div id="dNameDiv0">
-					<!--ClickMenu()-->
+				<div id="dNameDiv0"><!--ClickMenu()-->
 					<div id="dNameDiv1" onmouseover="this.style.backgroundPosition='bottom'"
 						onmouseout="this.style.backgroundPosition='top'" onclick="ShowLoginDiv()"></div>
 					<div id="dNameDiv2"></div>
 				</div>
 			</div>
 			<div id="dPause">
-				<table width="434" cellspacing="0" cellpadding="0" height="484">
+				<table style="border: none;" width="434" cellspacing="0" cellpadding="0" height="484">
 					<tr>
 						<td width="107" height="142" valign="bottom">
-							<img src="images/interface/dia_topleft.png" width="423" height="401">
+							<img src="./images/interface/dialog_topleft.png" width="423" height="401" />
 						</td>
 					</tr>
 				</table>
@@ -104,24 +97,27 @@
 					<div id="dOptionsMenu">
 						<div class="OMd0">
 							<div class="OMd1">
-								<div><input type="checkbox" id="cAutoSun" value="1" onchange="CheckAutoSun(this)">
+								<div><input type="checkbox" id="cAutoSun" value="1" onchange="CheckAutoSun(this)" />
 									<label for="cAutoSun" id="lAutoSun">自动拾取阳光</label>
 								</div>
-								<div><input type="checkbox" id="cSilence" value="1"> <label for="cSilence"
-										id="lSilence">静&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;音&nbsp;&nbsp;</label></div>
+								<div><input type="checkbox" id="cSilence" value="1" />
+									<label for="cSilence" id="lSilence">静&nbsp;&nbsp; &nbsp;&nbsp;音&nbsp;&nbsp; </label>
+								</div>
 							</div>
 						</div>
-						<div class="BigLevel button" onclick="ShowLevel()">&nbsp;游戏选关</div>
-						<div class="BigLevel button" onclick="ShowSpeed()">&nbsp;游戏调速</div>
-						<div class="BigLevel button" onclick="ViewHandBook()">&nbsp;查看图鉴</div>
-						<div class="BigLevel button" onclick="SelectModal(oS.Lvl)">&nbsp;重新开始</div>
-						<div class="BigLevel button" onclick="SelectModal(0);SetBlock($('dSurface'));">&nbsp;返回菜单</div>
+						<div class="BigLevel button" onclick="ShowLevel()">游戏选关</div>
+						<div class="BigLevel button" onclick="ShowSpeed()">游戏调速</div>
+						<div class="BigLevel button" onclick="ViewHandBook()">查看图鉴</div>
+						<div class="BigLevel button" onclick="SelectModal(oS.Lvl)">重新开始</div>
+						<div class="BigLevel button"
+							onclick="SelectModal(0);SetBlock($('dSurface'),$('iSurfaceBackground'));">返回菜单</div>
 						<div class="OptionsMenuButton" style="margin-top:20px"
 							onmousedown="OptionsMenuDown(this,$('sOptionsMenu'))"
 							onmouseup="OptionsMenuUP(this,$('sOptionsMenu'));HiddenOptions();CheckAutoSun($('cAutoSun'));CheckSilence($('cSilence'))">
 							<span id="sOptionsMenu" class="OptionsMenuButtonSpan">继续游戏</span>
 						</div>
 					</div>
+					<!-- js2 -->
 					<script>
 						var ArLvl = {
 							1: '一',
@@ -135,6 +131,7 @@
 							9: '九',
 							10: '十'
 						};
+
 						var ArLvls = {
 							1: 'Unity',
 							2: 'The 7 Seas',
@@ -183,10 +180,9 @@
 							<div class="title">白天草地</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,61px,auto,0);left:16px"
-									src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-									height="76">
-								</p>
+									src="./images/interface/Almanac_Ground.jpg" width="366" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
+									height="76" />
 							</div>
 							<div class="lvl2">
 								<script>
@@ -198,10 +194,9 @@
 							<div class="title">夜晚草地</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,183px,auto,122px);left:-106px"
-									src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
+									src="./images/interface/Almanac_Ground.jpg" width="366" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76">
-								</p>
 							</div>
 							<div class="lvl2">
 								<script>
@@ -213,10 +208,9 @@
 							<div class="title">白天泳池</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,305px,auto,244px);left:-228px"
-									src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-									height="76">
-								</p>
+									src="./images/interface/Almanac_Ground.jpg" width="366" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
+									height="76" />
 							</div>
 							<div class="lvl2">
 								<script>
@@ -224,14 +218,14 @@
 								</script>
 							</div>
 						</div>
+
 						<div class="list">
 							<div class="title">东海龙宫</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,244px,auto,183px);left:-167px"
-									src="images/interface/Almanac_Ground.jpg" width="366" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-									height="76">
-								</p>
+									src="./images/interface/Almanac_Ground.jpg" width="366" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
+									height="76" />
 							</div>
 							<div class="lvl2">
 								<script>
@@ -243,10 +237,9 @@
 							<div class="title">水乡嘉兴</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,61px,auto,0);left:16px"
-									src="images/interface/jiaxing.png" width="366" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-									height="76">
-								</p>
+									src="./images/interface/jiaxing.png" width="366" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
+									height="76" />
 							</div>
 							<div class="lvl2">
 								<script>
@@ -258,10 +251,9 @@
 							<div class="title">熔岩洞穴</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,61px,auto,0);left:16px" width="61" height="61"
-									src="images/interface/lavass.png" width="366" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-									height="76">
-								</p>
+									src="./images/interface/lavass.png" width="366" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
+									height="76" />
 							</div>
 							<div class="lvl2">
 								<script>
@@ -273,10 +265,9 @@
 							<div class="title">魔音之旅</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,61px,auto,0);left:16px"
-									src="images/interface/rrff.png" width="61" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-									height="76">
-								</p>
+									src="./images/interface/rrff.png" width="61" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
+									height="76" />
 							</div>
 							<div class="lvl2">
 								<script>
@@ -288,10 +279,9 @@
 							<div class="title">远古教堂</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,61px,auto,0);left:16px"
-									src="images/interface/dd.png" width="61" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-									height="76">
-								</p>
+									src="./images/interface/dd.png" width="61" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
+									height="76" />
 							</div>
 							<div class="lvl2">
 								<script>
@@ -303,10 +293,9 @@
 							<div class="title">电音时代</div>
 							<div class="icon">
 								<img class="img1" style="clip:rect(0,61px,auto,0);left:16px"
-									src="images/interface/d.png" width="61" height="61"></td>
-								<img class="img2" src="images/interface/Almanac_ZombieWindow2.png" width="76"
-									height="76">
-								</p>
+									src="./images/interface/d.png" width="61" height="61" />
+								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
+									height="76" />
 							</div>
 							<div class="lvl2">
 								<script>
@@ -339,6 +328,7 @@
 											'112', '决战秦皇', 'wang1.png',
 											'FB', '副本-关口恶战', 'FB.png',
 											'WJY', '副本-江轶同学会晤', 'WJY.png',
+
 										],
 										v, i = 0,
 										n, l = ar.length,
@@ -391,7 +381,7 @@
 										'QRWX', '全日无休', 'QRWX.png',
 										'Bowling2', '坚果保龄球 2', 'baolingqiu.png',
 										'GuanXin2', '观星2', 'GuanXin.png',
-										'yy2', '以牙还牙2', 'yy.png',
+										'yy2', '以牙还牙 2', 'yy.png',
 										'324', '排山倒海', 'pai.png',
 										'psdh', '排山倒海•谋略', 'pai.png',
 										'150', '常青之塔', 'mota.png'
@@ -402,19 +392,20 @@
 								for (n = 0; n < l; n += 3) {
 									i % 5 == 0 && (s += '<tr>');
 									s += '<td height="139" valign="top" onclick="SelectModal(\'' + ar[n] +
-										'\')"><div><img src="images/interface/' + ar[n + 2] + '"></div><div class="list">' + ar[n + 1] +
+										'\')"><div><img src="./images/interface/' + ar[n + 2] + '" /></div><div class="list">' + ar[n +
+											1] +
 										'</div></td>';
 									(i + 1) % 5 == 0 ? (
 										s += '</tr>',
 										i = 0
 									) : ++i;
-									//alert(ar[n]);
 								}
 
 								function getlevel(levelname, imgname, inmininame) {
 									i % 5 == 0 && (s += '<tr>');
 									s += '<td height="139" valign="top" onclick="SelectModal(\'' + levelname +
-										'\')"><div><img src="images/interface/' + imgname + '"></div><div class="list">' + inmininame +
+										'\')"><div><img src="./images/interface/' + imgname + '" /></div><div class="list">' +
+										inmininame +
 										'</div></td>';
 									(i + 1) % 5 == 0 ? (
 										s += '</tr>',
@@ -439,15 +430,12 @@
 						</script>
 					</table>
 					<div class="button" onmouseover="this.style.backgroundPosition='bottom'"
-						onmouseout="this.style.backgroundPosition='top'" onclick="HiddenMiniGame()">关闭
-					</div>
+						onmouseout="this.style.backgroundPosition='top'" onclick="HiddenMiniGame()">关闭</div>
 				</div>
-
 				<!--单机界面已作废，无特殊请勿乱动-->
 				<div id="dRiddle0">
 					<div class="button" onmouseover="this.style.backgroundPosition='bottom'"
-						onmouseout="this.style.backgroundPosition='top'" onclick="ReturnRiddleInx()">益智模式索引
-					</div>
+						onmouseout="this.style.backgroundPosition='top'" onclick="ReturnRiddleInx()">益智模式索引</div>
 				</div>
 				<!--对战界面已作废，无特殊请勿乱动-->
 				<div id="dRiddle1">
@@ -467,31 +455,28 @@
 							onclick="window.frames['fRiddleAlreadyCreateGame'].SearchLvl(5,$('tRiddleTitle').value)">标题查询</button>
 						<div style="border:1px solid #000;height:440px;width:100%;background:#fafafa">
 							<iframe name="fRiddleAlreadyCreateGame" id="fRiddleAlreadyCreateGame" marginwidth="1"
-								marginheight="1" height="100%" width="100%" scrolling="no" frameborder="0">
-							</iframe>
+								marginheight="1" height="100%" width="100%" scrolling="no" style="border: none;"
+								frameborder="0"></iframe>
 						</div>
 					</div>
 					<div class="button" onmouseover="this.style.backgroundPosition='bottom'"
-						onmouseout="this.style.backgroundPosition='top'" onclick="ReturnRiddleInx()">叛逆模式索引
-					</div>
+						onmouseout="this.style.backgroundPosition='top'" onclick="ReturnRiddleInx()">叛逆模式索引</div>
 					<div class="button" style="left:220px" onmouseover="this.style.backgroundPosition='bottom'"
 						onmouseout="this.style.backgroundPosition='top'"
 						onclick="if($User.Visitor.UserName!='游客'||confirm('游客只能体验创建功能无法存档\n请使用注册用户以保存你的创意！'))SelectModal('ImZombieCreateGame')">
-						创建新的关卡
-					</div>
+						创建新的关卡</div>
 				</div>
 				<div id="dRiddleClose" onmouseover="this.style.backgroundPosition='bottom'"
-					onmouseout="this.style.backgroundPosition='top'" onclick="HiddenRiddleGame()">关 闭&nbsp;
-				</div>
+					onmouseout="this.style.backgroundPosition='top'" onclick="HiddenRiddleGame()">关 闭&nbsp;</div>
 			</div>
+		</div>
 		</div>
 		<div class="WindowFrame" id="dAll">
 			<div id="tGround"></div>
 			<div id="dCardList"></div>
 			<div id="dZombie"></div>
 			<div id="bShowHandBook" onmouseover="this.style.backgroundPosition='bottom'"
-				onmouseout="this.style.backgroundPosition='top'" onclick="ViewHandBook()">图 鉴&nbsp;
-			</div>
+				onmouseout="this.style.backgroundPosition='top'" onclick="ViewHandBook()">图 鉴&nbsp;</div>
 			<div id="dSelectCard">
 				<div class="title"></div>
 				<div id="dPCard"></div>
@@ -507,7 +492,7 @@
 					<span id="sSunNum"></span>
 				</div>
 				<div id="tdShovel">
-					<img id="imgShovel" src="images/interface/Shovel/0.gif" onmousedown="ChoseShovel(event)">
+					<img id="imgShovel" src="./images/interface/Shovel/0.gif" onmousedown="ChoseShovel(event)" />
 				</div>
 			</div>
 			<div id="dPZ"></div>
@@ -520,19 +505,18 @@
 			<div class="title">图鉴——索引</div>
 			<div class="content">
 				<div>
-					<img src="images/Plants/SunFlower/0.gif" width="73" height="74"><br>
+					<img src="./images/Plants/SunFlower/0.gif" width="73" height="74" /><br>
 					<input class="button" type="button" value="查看植物" name="btnViewPlant" id="btnViewPlant"
 						onclick="InitHandBookPCard()">
 				</div>
 				<div style="left:50%;padding-top:95px">
-					<img src="images/Zombies/Zombie/0.gif" width="149" height="130"><br>
+					<img src="./images/Zombies/Zombie/0.gif" width="149" height="130" /><br>
 					<input class="button" type="button" value="查看僵尸" name="btnViewZombie" id="btnViewZombie"
 						onclick="InitHandBookZCard()">
 				</div>
 			</div>
 			<div class="close" onmouseover="this.style.backgroundPosition='bottom'"
-				onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;
-			</div>
+				onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;</div>
 		</div>
 		<div id="dHandBookPZ" class="WindowFrame Almanac_PlantBack">
 			<div id="dHandBookP">
@@ -561,11 +545,9 @@
 			</div>
 			<div class="dButton">
 				<div class="button1" onmouseover="this.style.backgroundPosition='bottom'"
-					onmouseout="this.style.backgroundPosition='top'" onclick="ReturnHandBookInx()">图鉴索引
-				</div>
+					onmouseout="this.style.backgroundPosition='top'" onclick="ReturnHandBookInx()">图鉴索引</div>
 				<div class="button2" onmouseover="this.style.backgroundPosition='bottom'"
-					onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;
-				</div>
+					onmouseout="this.style.backgroundPosition='top'" onclick="CloseHandBook()">关 闭&nbsp;</div>
 			</div>
 		</div>
 		<div id="dNewPlant">
@@ -582,14 +564,11 @@
 		</div>
 		<div id="dProcess">
 			<input class="button" type="button" value="关闭" onclick="SetHidden($('dProcess'))">
-			<script>
-				document.write(
-					'<a style="margin-left:50px;cursor:pointer;color:#FF0;font-size:15px;text-decoration:none;font-weight:bold" target="_blank" ></a>'
-				);
-			</script>
+			<a style="margin-left:50px;cursor:pointer;color:#FF0;font-size:15px;text-decoration:none;font-weight:bold"
+				target="_blank"></a>
 		</div>
 		<div id="dSpeedContainer">
-			<div class="title">调速功能使用说明：</div>
+			<div class="title">应玩家要求，特推出游戏调速功能</div>
 			<div class="dSpeed" title="点击一个速度选择软加速">
 				<div class="dS1">在相应的速度上点击</div>
 				<div class="dS2">
@@ -601,17 +580,18 @@
 				</div>
 			</div>
 			<div class="nowspeed">当前的游戏速度:<span id="dDisplaySpeed">1</span> 倍速</div>
-			<div class="content"><span>&nbsp;&nbsp;&nbsp; 调速说明</span>：理想状态下，游戏提供的速度调节是<strong style="color: #FFFF00;">
-					1/2倍速-10倍速</strong>。但是调速效果跟你的浏览器以及电脑有关，比如IE6浏览器在再好的电脑上也别指望能上10倍速。<br>&nbsp;&nbsp;&nbsp;
+			<div class="content"><span>&nbsp;&nbsp;&nbsp; 调速说明</span>：理想状态下，游戏提供的速度调节是<font color="#FFFF00">
+					1/2倍速-10倍速</font>。但是调速效果跟你的浏览器以及电脑有关，比如IE6浏览器在再好的电脑上也别指望能上10倍速。<br>&nbsp;&nbsp;&nbsp;
 				调速后可能画面视觉会出现偶尔有点一顿一顿的感觉，并且在比较高的速度时某些浏览器可能无法实现加速效果或者只能短时间加速然后速度便慢下来。<br>&nbsp;&nbsp;&nbsp; <span
 					style="color:#FF0"><b>最后强烈推荐使用IE9,Chrome,FireFox,Opera浏览器，能让你用豌豆射手体验到机关枪的感觉！<br>&nbsp;&nbsp;&nbsp;
-						声明：受浏览器和电脑限制，该调速不保证一定能达到选择速度的效果！</b></span>
-			</div>
-			<div class="buttons">
-				<input type=button value="返回游戏" onclick="HiddenSpeed()">&nbsp;&nbsp;
-				<input type=button value="恢复原速" onclick="CSpeed(1,10,1)">
+						声明：受浏览器和电脑限制，该调速不保证一定能达到选择速度的效果！</b></span></div>
+			<br>
+			<div>
+				<input type=button value="返回游戏" onclick="HiddenSpeed()">&nbsp;&nbsp; <input type=button value="恢复原速"
+					onclick="CSpeed(1,10,1)">
 			</div>
 		</div>
+		<!-- 公告 -->
 		<div id="youxigonggao">
 			<div class="title">游 &nbsp; 戏 &nbsp; 公 &nbsp; 告</div>
 			<div class="nowspeed">
@@ -659,4 +639,5 @@
 			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670070169085381"
 			crossorigin="anonymous"></script>
 	</body>
+
 </html>
