@@ -1,4 +1,4 @@
-﻿oS.Init({
+oS.Init({
     PName: [oPeashooter, oSunFlower, oCherryBomb, oWallNut, oPotatoMine, oSnowPea, oChomper, oRepeater, oPuffShroom, oSunShroom, oFumeShroom],
     ZName: [oZombie, oZombie2, oZombie3, oScreenDoorZombie],
     PicArr: function() {
@@ -113,11 +113,11 @@
         9 : [ShowLargeWave, 0]
     },
     FlagToEnd: function() {
-        NewImg("imgSF", "images/Card/Plants/HypnoShroom.png", "left:827px;top:525px;clip:rect(auto,auto,60px,auto)", EDAll, {
+        NewImg("imgSF", "images/Card/Plants/HypnoShroom.png", "left:80%;top:52%;clip:rect(auto,auto,60px,auto)", EDAll, {
             onclick: function() {
                 GetNewCard(this, oHypnoShroom, 16)
             }
         });
-        NewImg("PointerUD", "images/interface/PointerDown.gif", "top:490px;left:836px", EDAll)
+        NewImg("PointerUD", "images/interface/PointerDown.gif", "top:45%;left:84%", EDAll)
     }
 });

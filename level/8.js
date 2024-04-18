@@ -1,4 +1,4 @@
-﻿oS.Init({
+oS.Init({
     PName: [oPeashooter, oSunFlower, oCherryBomb, oWallNut, oPotatoMine, oSnowPea, oChomper],
     ZName: [oZombie, oZombie2, oZombie3, oConeheadZombie, oBucketheadZombie],
     PicArr: function() {
@@ -25,11 +25,11 @@
         9 : [ShowFinalWaveday, 0]
     },
     FlagToEnd: function() {
-        NewImg("imgSF", "images/Card/Plants/Repeater.png", "left:827px;top:525px;clip:rect(auto,auto,60px,auto)", EDAll, {
+        NewImg("imgSF", "images/Card/Plants/Repeater.png", "left:80%;top:52%;clip:rect(auto,auto,60px,auto)", EDAll, {
             onclick: function() {
                 GetNewCard(this, oRepeater, 9)
             }
         });
-        NewImg("PointerUD", "images/interface/PointerDown.gif", "top:490px;left:836px", EDAll)
+        NewImg("PointerUD", "images/interface/PointerDown.gif", "top:45%;left:84%", EDAll)
     }
 });

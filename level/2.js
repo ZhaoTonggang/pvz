@@ -68,95 +68,95 @@
 			});
 			e < 990 ? oSym.addTask(3, arguments.callee, [e, h, b, d, c, g, a, f]) : (ClearChild($(
 				"SodRoll_1"), $("SodRoll_2"), $("SodRollCap_1"), $("SodRollCap_2")), (
-		function() {
-				StopMusic();
-				PlayMusic(oS.LoadMusic = oS.StartGameMusic);
-				oS.InitLawnMower();
-				SetVisible($("dFlagMeter"), $("dTop"));
-				PrepareGrowPlants(function() {
-					NewEle("DivTeach", "div", 0, 0, EDAll);
-					oP.Monitor({
-						ar: [0],
-						f: function(l) {
-							var m = oS.C + 1;
-							switch (l) {
-								case 0:
-									innerText($("DivTeach"),
-										"向日葵是非常重要的植物！");
-									NewImg("PointerUD",
-										"images/interface/PointerUP.gif",
-										"top:120px;left:50px", EDAll
+				function() {
+					StopMusic();
+					PlayMusic(oS.LoadMusic = oS.StartGameMusic);
+					oS.InitLawnMower();
+					SetVisible($("dFlagMeter"), $("dTop"));
+					PrepareGrowPlants(function() {
+						NewEle("DivTeach", "div", 0, 0, EDAll);
+						oP.Monitor({
+							ar: [0],
+							f: function(l) {
+								var m = oS.C + 1;
+								switch (l) {
+									case 0:
+										innerText($("DivTeach"),
+											"向日葵是非常重要的植物！");
+										NewImg("PointerUD",
+											"images/interface/PointerUP.gif",
+											"top:120px;left:50px", EDAll
 										);
-									oSym.addTask(10, arguments.callee, [
-										++l
-									]);
-									break;
-								case 1:
-									var j = oGd.$,
-										i;
-									for (i in j) {
-										if (j[i].EName ==
-											"oSunFlower") {
-											innerText($("DivTeach"),
-												"至少要种下三棵向日葵！");
-											oSym.addTask(10, arguments
-													.callee, [++l])
-												.addTask(2500,
-													function() {
-														oP
-													.AddZombiesFlag();
-														SetVisible($(
-															"dFlagMeterContent"
+										oSym.addTask(10, arguments.callee, [
+											++l
+										]);
+										break;
+									case 1:
+										var j = oGd.$,
+											i;
+										for (i in j) {
+											if (j[i].EName ==
+												"oSunFlower") {
+												innerText($("DivTeach"),
+													"至少要种下三棵向日葵！");
+												oSym.addTask(10, arguments
+														.callee, [++l])
+													.addTask(2500,
+														function() {
+															oP
+																.AddZombiesFlag();
+															SetVisible($(
+																"dFlagMeterContent"
 															))
-													},
-													[]);
-											return
+														},
+														[]);
+												return
+											}
 										}
-									}
-									oSym.addTask(10, arguments.callee, [
-										l
-									]);
-									break;
-								case 2:
-									var j = oGd.$,
-										i, k = 0;
-									for (i in j) {
-										j[i].EName == "oSunFlower" && (
-											++k)
-									}
-									k > 1 && (innerText($("DivTeach"),
-										"你需要更多的向日葵，这样你才能更快的种植物！"
+										oSym.addTask(10, arguments.callee, [
+											l
+										]);
+										break;
+									case 2:
+										var j = oGd.$,
+											i, k = 0;
+										for (i in j) {
+											j[i].EName == "oSunFlower" && (
+												++k)
+										}
+										k > 1 && (innerText($("DivTeach"),
+											"你需要更多的向日葵，这样你才能更快的种植物！"
 										), ++l);
-									oSym.addTask(10, arguments.callee, [
-										l
-									]);
-									break;
-								default:
-									var j = oGd.$,
-										i, k = 0;
-									for (i in j) {
-										j[i].EName == "oSunFlower" && (
-											++k)
-									}
-									k > 2 ? (innerText($("DivTeach"),
-											"现在用你获得的阳光种植其它的植物！"),
-										SetStyle($("PointerUD"), {
-											left: "50px",
-											top: "60px"
-										}), oSym.addTask(500,
-											SetNone, [$(
-												"PointerUD"), $(
-													"DivTeach")
-											])) : oSym.addTask(10,
-										arguments.callee, [3])
+										oSym.addTask(10, arguments.callee, [
+											l
+										]);
+										break;
+									default:
+										var j = oGd.$,
+											i, k = 0;
+										for (i in j) {
+											j[i].EName == "oSunFlower" && (
+												++k)
+										}
+										k > 2 ? (innerText($("DivTeach"),
+													"现在用你获得的阳光种植其它的植物！"),
+												SetStyle($("PointerUD"), {
+													left: "50px",
+													top: "60px"
+												}), oSym.addTask(500,
+													SetNone, [$(
+														"PointerUD"), $(
+														"DivTeach")])) :
+											oSym.addTask(10,
+												arguments.callee, [3])
+								}
+								return l
 							}
-							return l
-						}
-					});
-					BeginCool();
-					AutoProduceSun(25)
-				})
-			})())
+						});
+						BeginCool();
+						AutoProduceSun(25)
+					})
+				})())
 		})(283, 122, 68, 117, 73, 71, 131, 511)
 	}
 }, {
@@ -175,14 +175,14 @@
 	},
 	FlagToEnd: function() {
 		NewImg("imgSF", "images/Card/Plants/CherryBomb.png",
-			"left:827px;top:220px;clip:rect(auto,auto,60px,auto)", EDAll, {
+			"left:80%;top:52%;clip:rect(auto,auto,60px,auto)", EDAll, {
 				onclick: function() {
 					GetNewCard(this, oCherryBomb, 3)
 				}
 			});
 		EditImg($("PointerUD"), 0, "images/interface/PointerDown.gif", {
-			left: "836px",
-			top: "185px",
+			left: "84%",
+			top: "45%",
 			display: "block"
 		})
 	}

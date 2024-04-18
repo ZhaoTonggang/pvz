@@ -15,6 +15,8 @@
 		<link rel="icon" type="image/png" sizes="384x384" href="./icons/384.png">
 		<link rel="icon" type="image/png" sizes="512x512" href="./icons/512.png">
 		<link rel="stylesheet" href="./css/index.css">
+		<script type="text/javascript" src="./js/Cfunction.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./js/Welcome.js" charset="UTF-8"></script>
 		<!--PWA配置-->
 		<link rel='manifest' href='./manifest.json' />
 	</head>
@@ -22,8 +24,6 @@
 		<div id="preloader">
 			<div id="status" class="WindowFrame"></div>
 		</div>
-		<script src="./js/Cfunction.js"></script>
-		<script src="./js/Welcome.js"></script>
 		<div id="dFlagMeter">
 			<div id="dFlagMeterTitle">
 				<div id="dFlagMeterTitleB"></div>
@@ -72,8 +72,10 @@
 					onmouseout="this.style.backgroundPosition='top'" onclick="ViewHandBook()"></div>
 				<div id="ZombieHand"></div>
 				<div id="dNameDiv0"><!--ClickMenu()-->
-					<div id="dNameDiv1" onmouseover="this.style.backgroundPosition='bottom'"
-						onmouseout="this.style.backgroundPosition='top'" onclick="ShowLoginDiv()"></div>
+					<a title="在线游戏盒" href="https://gamebox.heheda.top">
+						<div id="dNameDiv1" onmouseover="this.style.backgroundPosition='bottom'"
+							onmouseout="this.style.backgroundPosition='top'"></div>
+					</a>
 					<div id="dNameDiv2"></div>
 				</div>
 			</div>
@@ -384,7 +386,8 @@
 										'yy2', '以牙还牙 2', 'yy.png',
 										'324', '排山倒海', 'pai.png',
 										'psdh', '排山倒海•谋略', 'pai.png',
-										'150', '常青之塔', 'mota.png'
+										'150', '常青之塔', 'mota.png',
+										'Helloween', '万圣节', 'fmdzz.png'
 									],
 									v, i = 0,
 									n, l = ar.length,
@@ -597,25 +600,25 @@
 			<div class="nowspeed">
 				<hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;">
 			</div>
+			<div class="nowspeed"><em style="color: #FF0;text-align: center;">2024年04月18日</em></div>
+			<div class="content"><span> 1.重构UI界面；</span><span> 2.修复已知问题；</span><span> 3.优化源码结构</span></div>
+			<div class="nowspeed">
+				<hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;">
+			</div>
 			<div class="nowspeed"><em style="color: #FF0;text-align: center;">2021年06月12日</em></div>
 			<div class="content"><span> 重构了“迷你游戏-排山倒海”</span></div>
 			<div class="nowspeed">
 				<hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;">
 			</div>
 			<div class="nowspeed"><em style="color: #FF0;text-align: center;">2021年06月06日</em></div>
-			<div class="content"><span>1.修复了元素定位错误。</span><br><span>2.优化了源码结构。</span></div>
+			<div class="content"><span>1.修复了元素定位错误；</span><span>2.优化了源码结构。</span></div>
 			<div class="nowspeed">
 				<hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;">
 			</div>
 			<div class="nowspeed"><em style="color: #FF0;text-align: center;">2021年06月05日</em></div>
 			<div class="content"><span> 新域名“https://pvz.heheda.cn/”启用。</span></div>
-			<div class="nowspeed">
-				<hr style="background-color:rgb(0, 255, 234);height: 2px;border:none;">
-			</div>
-			<div class="nowspeed"><em style="color: #FF0;text-align: center;">2021年06月04日</em></div>
-			<div class="content"><span> 重写了UI界面。</span></div>
 			<div class="buttons">
-				<input type=button value="朕已阅" onclick="GongGaoOff()">
+				<button onclick="GongGaoOff()">知道了</button>
 			</div>
 		</div>
 		<script>
@@ -626,8 +629,8 @@
 				oS.Silence = 0, $('cSilence').checked = false);
 			InitGame();
 		</script>
-		<script src="./js/CPlants.js"></script>
-		<script src="./js/CZombie.js"></script>
+		<script async type="text/javascript" src="./js/CPlants.js" charset="UTF-8"></script>
+		<script async type="text/javascript" src="./js/CZombie.js" charset="UTF-8"></script>
 		<!-- PWA -->
 		<script async type="module">
 			import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
@@ -639,5 +642,4 @@
 			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670070169085381"
 			crossorigin="anonymous"></script>
 	</body>
-
 </html>

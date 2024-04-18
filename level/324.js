@@ -1,4 +1,4 @@
-﻿oS.Init({
+oS.Init({
 	PName: [oPotatoMinep, oGayPea, oTenManNutp, oCherryBombp, oSquashp, oJalapenop],
 	ZName: [oScreenDoorZombie, oBucketheadZombie, oFootballZombie],
 	PicArr: ["images/interface/background1.jpg", "images/interface/trophy.png"],
@@ -234,7 +234,7 @@
 		a = window.event || a;
 		var f = ArCard[oS.ChoseCard],
 			e = a.clientX - EDAlloffsetLeft + EBody.scrollLeft || EElement.scrollLeft,
-			d = a.clientY + EBody.scrollTop || EElement.scrollTop,
+			d = a.clientY - EDAlloffsetTop + EBody.scrollTop || EElement.scrollTop,
 			c = f.PName.prototype;
 		oS.Chose = 1;
 		EditImg(NewImg("MovePlant", c.PicArr[c.StaticGif], "left:" + e - 0.5 * (c.beAttackedPointL + c

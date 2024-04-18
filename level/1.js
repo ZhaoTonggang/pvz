@@ -238,8 +238,8 @@
 				}
 			});
 		EditImg($("PointerUD"), 0, "images/interface/PointerDown.gif", {
-			left: "676px",
-			top: "295px",
+			left: "700px",
+			top: "290px",
 			visibility: "visible"
 		})
 	}

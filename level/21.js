@@ -1,4 +1,4 @@
-﻿oS.Init({
+oS.Init({
     PName: [oPeashooter, oSunFlower, oCherryBomb, oWallNut, oPotatoMine, oSnowPea, oChomper, oRepeater, oPuffShroom, oSunShroom, oFumeShroom, oGraveBuster, oHypnoShroom, oScaredyShroom, oIceShroom, oDoomShroom, oLilyPad],
     ZName: [oZombie, oZombie2, oZombie3, oDuckyTubeZombie1, oConeheadZombie],
     PicArr: function() {
@@ -118,11 +118,11 @@
         9 : [ShowFinalWave, 0]
     },
     FlagToEnd: function() {
-        NewImg("imgSF", "images/Card/Plants/Squash.png", "left:827px;top:525px;clip:rect(auto,auto,60px,auto)", EDAll, {
+        NewImg("imgSF", "images/Card/Plants/Squash.png", "left:80%;top:52%;clip:rect(auto,auto,60px,auto)", EDAll, {
             onclick: function() {
                 SelectModal(22)
             }
         });
-        NewImg("PointerUD", "images/interface/PointerDown.gif", "top:490px;left:836px", EDAll)
+        NewImg("PointerUD", "images/interface/PointerDown.gif", "top:45%;left:84%", EDAll)
     }
 });
