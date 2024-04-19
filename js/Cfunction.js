@@ -415,7 +415,7 @@ var $User = function() {
 						i.ScrollScreen()
 					},
 					[NewEle("DivParty", "div",
-						"line-height:50px;color:#FFFFFF;font-size:50px;font-family:方正少儿简体", {},
+						"line-height:50px;color:#FFFFFF;font-size:50px;", {},
 						EDAll)]) : (SetVisible($("dMenu")), AutoSelectCard(), LetsGO())
 			};
 			f.LoadAccess ? f.LoadAccess(d) : d()
@@ -1729,10 +1729,10 @@ var $User = function() {
 	DoCoolTimer = function(c, b) {
 		var a = $(ArCard[c].DID);
 		NewEle("dCD1" + c, "span",
-			"position:absolute;left:22px;top:22px;font-size:18px;font-weight:500;font-family:Verdana;color:#000",
+			"position:absolute;left:22px;top:22px;font-size:18px;font-weight:500;color:#000",
 			"", a);
 		NewEle("dCD2" + c, "span",
-			"position:absolute;left:20px;top:20px;font-size:18px;font-weight:500;font-family:Verdana;color:#FF0",
+			"position:absolute;left:20px;top:20px;font-size:18px;font-weight:500;color:#FF0",
 			"", a);
 		(function(d, e) {
 			d > 0 ? (innerText($("dCD1" + e), d), innerText($("dCD2" + e), d), oSym.addTask(50, arguments.callee, [(
@@ -2282,13 +2282,13 @@ var $User = function() {
 	},
 	InitGame = function() {
 		var e = NewEle("dServer", "div",
-				"position:absolute;line-height:28px;left:706px;top:245px;width:700px;height:100px;font-size:16px;color:#040;font-family:黑体;font-weight:bold;z-index:2;display:none",
+				"position:absolute;line-height:28px;left:706px;top:245px;width:700px;height:100px;font-size:16px;color:#040;font-weight:bold;z-index:2;display:none",
 				0, $("dAll")),
 			c = $User.Server,
 			b = c.List,
 			a = $("dProcess");
 		!$("dText1") && a.insertBefore(NewEle("dText1", "div", 0, {
-				innerHTML: '<span style="line-height:23px;font-size:15px;font-family:&#x9ED1;&#x4F53;;color:#F60;top:32px">欢迎体验<span style="font-family:Verdana;font-weight:700">新版植物大战僵尸JS</span>,程序是玩家自制,与任何盈利公司无关。<span style="font-family:Verdana;font-weight:700">LonelyStar与江南游戏开发社</span>保留对该程序版权所有,游戏题材、素材、音效归Popcap Games，Electronic Arts所有，个别背景音乐来源免费音乐网站。如您需要转载，请保留以上版权说明，不然视盗版处理。</span>'
+				innerHTML: '<span style="line-height:23px;font-size:15px;color:#F60;top:32px">欢迎体验<span style="font-weight:700">新版植物大战僵尸JS</span>,程序是玩家自制,与任何盈利公司无关。<span style="font-weight:700">LonelyStar与江南游戏开发社</span>保留对该程序版权所有,游戏题材、素材、音效归Popcap Games，Electronic Arts所有，个别背景音乐来源免费音乐网站。如您需要转载，请保留以上版权说明，不然视盗版处理。</span>'
 			},
 			0), a.firstChild);
 		// LoadLvl();
@@ -2297,13 +2297,13 @@ var $User = function() {
 	},
 	InitGameEN = function() {
 		var e = NewEle("dServer", "div",
-				"position:absolute;line-height:28px;left:706px;top:245px;width:700px;height:100px;font-size:16px;color:#040;font-family:黑体;font-weight:bold;z-index:2;display:none",
+				"position:absolute;line-height:28px;left:706px;top:245px;width:700px;height:100px;font-size:16px;color:#040;font-weight:bold;z-index:2;display:none",
 				0, $("dAll")),
 			c = $User.Server,
 			b = c.List,
 			a = $("dProcess");
 		!$("dText1") && a.insertBefore(NewEle("dText1", "div", 0, {
-				innerHTML: '<span style="line-height:23px;font-size:15px;font-family:&#x9ED1;&#x4F53;;color:#F60;top:32px">欢迎体验<span style="font-family:Verdana;font-weight:700">新版植物大战僵尸JS</span>,程序是玩家自制,与任何盈利公司无关。<span style="font-family:Verdana;font-weight:700">LonelyStar与江南游戏开发社</span>保留对该程序版权所有,游戏题材、素材、音效归Popcap Games，Electronic Arts所有，个别背景音乐来源免费音乐网站。如您需要转载，请保留以上版权说明，不然视盗版处理。</span>'
+				innerHTML: '<span style="line-height:23px;font-size:15px;color:#F60;top:32px">欢迎体验<span style="font-weight:700">新版植物大战僵尸JS</span>,程序是玩家自制,与任何盈利公司无关。<span style="font-family:Verdana;font-weight:700">LonelyStar与江南游戏开发社</span>保留对该程序版权所有,游戏题材、素材、音效归Popcap Games，Electronic Arts所有，个别背景音乐来源免费音乐网站。如您需要转载，请保留以上版权说明，不然视盗版处理。</span>'
 			},
 			0), a.firstChild);
 		// LoadLvl();
