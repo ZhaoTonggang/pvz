@@ -1,10 +1,76 @@
-// 初始化
-$User.Client.PC && $User.HTTP ? (
-	(oS.AutoSun = Math.floor(getCookie('JSPVZAutoSun'))) && ($('cAutoSun').checked = true),
-	(oS.Silence = Math.floor(getCookie('JSPVZSilence'))) && ($('cSilence').checked = true)
-) : (oS.AutoSun = 1, $('cAutoSun').checked = true,
-	oS.Silence = 0, $('cSilence').checked = false);
-InitGame();
+// 页面路由
+const url = window.location.href;
+if (window.top != window) {
+	alert('当您看到这条提示意味着：您所访问的网站正在恶意调用本站资源，本站对偷盗资源的行为0容忍，点击确认跳转正版体验。');
+	window.open(url, '_self');
+} else if (url.indexOf('index') > -1) {
+	window.open('./', '_self');
+}
+// 填充冒险列表
+const ArLvl = {
+	1: '一',
+	2: '二',
+	3: '三',
+	4: '四',
+	5: '五',
+	6: '六',
+	7: '七',
+	8: '八',
+	9: '九',
+	10: '十'
+};
+
+const ArLvls = {
+	1: 'Unity',
+	2: 'The 7 Seas',
+	3: 'Vivid',
+	4: 'Hope',
+	5: 'Thoery Of Everything',
+	6: '六',
+	7: '七',
+	8: '八',
+	9: '九',
+	10: '十'
+};
+LvlList3 = (dAdvID, BLvl, SLvl1, SLvl2) => {
+	var s = '',
+		startlvl = BLvl * 10;
+	do {
+		s += '<span class="lvl" onclick="StartAdventure(' + (startlvl + SLvl1) + ')">第' + ArLvl[SLvl1] +
+			'夜</span>';
+	} while (SLvl1++ < SLvl2)
+	document.getElementById(dAdvID).innerHTML = s;
+}
+
+LvlList2 = (dAdvID, BLvl, SLvl1, SLvl2) => {
+	var s = '',
+		startlvl = BLvl * 10;
+	do {
+		s += '<span class="lvl" onclick="StartAdventure(' + (startlvl + SLvl1) + ')">' + ArLvls[SLvl1] +
+			'</span>';
+	} while (SLvl1++ < SLvl2)
+	document.getElementById(dAdvID).innerHTML = s;
+};
+LvlList = (dAdvID, BLvl, SLvl1, SLvl2) => {
+	var s = '',
+		startlvl = BLvl * 10;
+	do {
+		s += '<span class="lvl" onclick="StartAdventure(' + (startlvl + SLvl1) + ')">第' + ArLvl[SLvl1] +
+			'关</span>';
+	} while (SLvl1++ < SLvl2)
+	document.getElementById(dAdvID).innerHTML = s;
+};
+// 初始化冒险
+LvlList('btcd', 0, 1, 10);
+LvlList('ywcd', 1, 1, 10);
+LvlList('btyc', 2, 1, 10);
+LvlList('dhlg', 3, 1, 10);
+LvlList('sxjx', 4, 1, 10);
+LvlList('rydx', 32, 1, 4);
+LvlList('myzl', 5, 1, 10);
+LvlList3('ygjt', 30, 1, 10);
+LvlList2('dysd', 31, 1, 5);
+
 // 填充列表
 const setList = (a, b) => {
 	let i = 0,
@@ -98,3 +164,10 @@ startrun(0);
 setTimeout(() => {
 	SetNone($("preloader"), $("status"));
 }, 1000);
+// 初始化
+$User.Client.PC && $User.HTTP ? (
+	(oS.AutoSun = Math.floor(getCookie('JSPVZAutoSun'))) && ($('cAutoSun').checked = true),
+	(oS.Silence = Math.floor(getCookie('JSPVZSilence'))) && ($('cSilence').checked = true)
+) : (oS.AutoSun = 1, $('cAutoSun').checked = true,
+	oS.Silence = 0, $('cSilence').checked = false);
+InitGame();

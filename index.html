@@ -117,61 +117,6 @@
 							<span id="sOptionsMenu" class="OptionsMenuButtonSpan">继续游戏</span>
 						</div>
 					</div>
-					<!-- js2 -->
-					<script>
-						var ArLvl = {
-							1: '一',
-							2: '二',
-							3: '三',
-							4: '四',
-							5: '五',
-							6: '六',
-							7: '七',
-							8: '八',
-							9: '九',
-							10: '十'
-						};
-
-						var ArLvls = {
-							1: 'Unity',
-							2: 'The 7 Seas',
-							3: 'Vivid',
-							4: 'Hope',
-							5: 'Thoery Of Everything',
-							6: '六',
-							7: '七',
-							8: '八',
-							9: '九',
-							10: '十'
-						};
-						LvlList3 = function(BLvl, SLvl1, SLvl2) {
-							var s = '',
-								startlvl = BLvl * 10;
-							do {
-								s += '<span class="lvl" onclick="StartAdventure(' + (startlvl + SLvl1) + ')">第' + ArLvl[SLvl1] +
-									'夜</span>';
-							} while (SLvl1++ < SLvl2)
-							document.write(s);
-						};
-						LvlList2 = function(BLvl, SLvl1, SLvl2) {
-							var s = '',
-								startlvl = BLvl * 10;
-							do {
-								s += '<span class="lvl" onclick="StartAdventure(' + (startlvl + SLvl1) + ')">' + ArLvls[SLvl1] +
-									'</span>';
-							} while (SLvl1++ < SLvl2)
-							document.write(s);
-						};
-						LvlList = function(BLvl, SLvl1, SLvl2) {
-							var s = '',
-								startlvl = BLvl * 10;
-							do {
-								s += '<span class="lvl" onclick="StartAdventure(' + (startlvl + SLvl1) + ')">第' + ArLvl[SLvl1] +
-									'关</span>';
-							} while (SLvl1++ < SLvl2)
-							document.write(s);
-						};
-					</script>
 				</div>
 				<div id="dAdvSmallContainer" class="TitleSmallContainer Challenge_Background">
 					<div id="dAdvSmallTitle">冒险模式</div>
@@ -184,11 +129,7 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76" />
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList(0, 1, 10)
-								</script>
-							</div>
+							<div id="btcd" class="lvl2"></div>
 						</div>
 						<div class="list">
 							<div class="title">夜晚草地</div>
@@ -198,11 +139,7 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76">
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList(1, 1, 10)
-								</script>
-							</div>
+							<div id="ywcd" class="lvl2"></div>
 						</div>
 						<div class="list">
 							<div class="title">白天泳池</div>
@@ -212,13 +149,8 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76" />
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList(2, 1, 10)
-								</script>
-							</div>
+							<div id="btyc" class="lvl2"></div>
 						</div>
-
 						<div class="list">
 							<div class="title">东海龙宫</div>
 							<div class="icon">
@@ -227,11 +159,7 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76" />
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList(3, 1, 10)
-								</script>
-							</div>
+							<div id="dhlg" class="lvl2"></div>
 						</div>
 						<div class="list">
 							<div class="title">水乡嘉兴</div>
@@ -241,11 +169,7 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76" />
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList(4, 1, 10)
-								</script>
-							</div>
+							<div id="sxjx" class="lvl2"></div>
 						</div>
 						<div class="list">
 							<div class="title">熔岩洞穴</div>
@@ -255,11 +179,7 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76" />
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList(32, 1, 4)
-								</script>
-							</div>
+							<div id="rydx" class="lvl2"></div>
 						</div>
 						<div class="list">
 							<div class="title">魔音之旅</div>
@@ -269,11 +189,7 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76" />
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList(5, 1, 10)
-								</script>
-							</div>
+							<div id="myzl" class="lvl2"></div>
 						</div>
 						<div class="list">
 							<div class="title">远古教堂</div>
@@ -283,11 +199,7 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76" />
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList3(30, 1, 10)
-								</script>
-							</div>
+							<div id="ygjt" class="lvl2"></div>
 						</div>
 						<div class="list">
 							<div class="title">电音时代</div>
@@ -297,11 +209,7 @@
 								<img class="img2" src="./images/interface/Almanac_ZombieWindow2.png" width="76"
 									height="76" />
 							</div>
-							<div class="lvl2">
-								<script>
-									LvlList2(31, 1, 5)
-								</script>
-							</div>
+							<div id="dysd" class="lvl2"></div>
 						</div>
 						<div class="button" onmouseover="this.style.backgroundPosition='bottom'"
 							onmouseout="this.style.backgroundPosition='top'" onclick="HiddenLevel()">关闭</div>
